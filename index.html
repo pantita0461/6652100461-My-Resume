@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บโปรไฟล์</title>
+    <style>
+        /* CSS สำหรับการออกแบบทั่วไป */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        header em {
+            font-style: italic;
+            font-size: 18px;
+        }
+        nav {
+            background-color: #333;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            padding: 14px 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        .hamburger div {
+            background-color: white;
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+        }
+        section {
+            padding: 60px 20px;
+            margin: 0 10%;
+        }
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li {
+                padding: 10px;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+                padding: 10px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- รูปภาพโปรไฟล์ -->
+    <img src="mint.jpg" alt="Profile Picture">
+    <h1>Pantita Chankhampa</h1>
+    <p> คณะวิศวกรรมศาสตร์และเทคโนโลยี</p>
+    <em>สาขาเทคโนโลยีดิจิทัลและสารสนเทศ</em>
+    <p> <a href="http://pim.ac.th" target="_blank">Panyapiwat Institute of Management</a></p>
+</header>
+
+<!-- Navbar แบบ Toggle -->
+<nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <ul id="navbar">
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#softSkills">Soft Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- About Me Section -->
+<section id="aboutMe">
+    <h2>About Me</h2>
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Pantita Chankhampa</td>
+        </tr>
+        <tr>
+            <td>Nickname</td>
+            <td>BaiMint</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>19 Years Old</td>
+        </tr>
+        <tr>
+            <td>Birthday</td>
+            <td>22 February 2005</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>Tiwanon Mansion  165, 167 Tiwanon Road, Thasai Subdistrict, Mueang Nonthaburi District, Nonthaburi 11000</td>
+        </tr>
+        <tr>
+            <td>Major</td>
+            <td>Digital Information And Technology (DIT)</td>
+        </tr>
+        <tr>
+            <td>University</td>
+            <td>Panyapiwat Institute of Management (PIM)</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <h2>Education</h2>
+    <table>
+        <tr>
+            <th>Degree</th>
+            <th>Major</th>
+            <th>Institute</th>
+            <th>GPAX</th>
+        </tr>
+        <tr>
+            <td>High Sshool</td>
+            <td>Art - Modern Business Management</td>
+            <td>Wang Nam Yen Wittayakom School</td>
+            <td>3.28</td>
+        </tr>
+        <tr>
+            <td>University</td>
+            <td>Digital and Information Technology</td>
+            <td>Panyapiwat Institute of Management</td>
+            <td>3.37</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <h2>Experience</h2>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>C.P. SEVEN ELEVEN PUBLIC COMPANY LIMITED (CP7-11)</td>
+            <td>Cashier, Rider Coordination, All Cafe, Restocking, Store Cleaning</td>
+            <td>1 March - 31 May 2024</td>
+        </tr>
+    </table>
+    <h3>Roles</h3>
+    <ul>
+        <li><strong>Cashier:</strong> Process payments for customers who visit the store.</li>
+        <li><strong>Rider Coordination:</strong> Manage product deliveries ordered by customers through the 7-Eleven app.</li>
+        <li><strong>All Cafe:</strong>  Prepare beverages for All Cafe. </li>
+        <li><strong>Restocking:</strong> Refill products delivered to the store.</li>
+        <li><strong>Store Cleaning:</strong> Clean the store before the end of the shift.</li>
+    </ul>
+</section>
+
+<!-- Soft Skills Section -->
+<section id="ComputerSkills">
+    <h2>Computer Skills</h2>
+    <ul>
+        <li> Proficient to use Google Forms Photo and Video</li>
+        <li> editing applications such as Cap-cut </li>
+        <li> Skills led in Canva</li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="Contact">
+    <h2>Contact</h2>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:pantita0461@gmail.com">pantita0461@gmail.com</a></li>
+        <li><strong>Phone:</strong> 082-xxxxxxx</li>
+        <li><strong>Address:</strong>Tiwanon Mansion  165, 167 Tiwanon Road, Thasai Subdistrict, Mueang Nonthaburi District, Nonthaburi 11000</li>
+    </ul>
+</section>
+
+<!-- JavaScript สำหรับ Toggle Navbar -->
+<script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
